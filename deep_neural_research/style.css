@@ -164,23 +164,6 @@
 canvas {
   width: 100%;
 }
-/* Unique Heading Style */
-.wow-heading {
-  font-size: 4rem;
-  line-height: 1.2;
-  text-align: center;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: #fff;
-  background: linear-gradient(120deg, #34ace0, #ff4d4d, #ffdd59, #2ed573);
-  background-size: 300% 300%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradient-flow 6s ease infinite;
-  letter-spacing: 0.1em;
-  position: relative;
-  z-index: 1;
-}
 /* Wow Heading Style with Enhanced Animations */
 .wow-heading {
   font-size: 4rem;
@@ -195,7 +178,22 @@ canvas {
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: glow-blink 2s ease-in-out infinite, slide-in 1.5s ease-out;
+  
+  /* Subtle shadow to add depth */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  
+  /* Smooth gradient animation */
+  animation: gradient-animation 3s linear infinite;
+}
+
+/* Gradient animation */
+@keyframes gradient-animation {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
 }
 /* Styling for the Paragraph */
 .wow-paragraph {
@@ -249,24 +247,6 @@ canvas {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
-
-
-/* Glow-Blink Animation */
-@keyframes glow-blink {
-  0% {
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
-      opacity: 1;
-  }
-  50% {
-      text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 255, 255, 0.8);
-      opacity: 0.7;
-  }
-  100% {
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
-      opacity: 1;
-  }
-}
 
 /* Slide-In Effect */
 @keyframes slide-in {
