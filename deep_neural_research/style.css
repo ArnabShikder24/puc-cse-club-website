@@ -204,7 +204,7 @@ canvas {
   text-align: left;
   max-width: 750px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 0px;
   position: relative;
   overflow: hidden;
   letter-spacing: 0.01em;
